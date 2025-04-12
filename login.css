@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+.conatiner{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ACADBC;
+}
+
+.box{
+    height: 50%;
+    width: 40%;
+    background-color: #9B9ECE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw 0 2vw 0;
+}
+
+.heading{
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+.username{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin: 2vw 0 2vw 0;
+}
+
+.password{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+#halam , #halam-safe{
+    height: 35px;
+    padding: 1vw;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 20px;
+    color: white;
+    background-color: #111;
+    transition: all 0.33s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(5, 36, 48);
+
+    }
+}
+
+.enter{
+    margin-top: 5vw;
+    width: 200px;
+    height: 50px;
+    background-color: blue;
+    transition: all 0.33s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(21, 102, 134);
+
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="conatiner">
+        <div class="box">
+            <div class="heading">Log In</div>
+            <div class="username">
+                <p>Username : </p>
+                <div class="username_input"><input id="halam" type="text"></div>
+            </div>
+            <div class="password">
+                <p>Password :</p>
+                <div class="password-input">
+                    <input id="halam-safe" type="password">
+                </div>
+                <button class="show">Show</button>
+            </div>
+            <button class="enter">Enter</button>
+        </div>
+    </div>
+    <script>
+        let show = document.body.querySelector(".show")
+        let halam_pass = document.body.querySelector("#halam-safe")
+        show.addEventListener("click" , ()=>{
+            if(halam_pass.type == "password"){
+                halam_pass.type = "text"
+            }
+            else{
+                halam_pass.type = "password"
+            }
+        })
+        document.body.querySelector(".enter").addEventListener("click",()=>{
+            if(
+                document.body.querySelector("#halam-safe").value === "Rd$$deve_1092"
+                &&
+                document.body.querySelector("#halam").value === "Rijan Dhakal"
+            ){
+                alert("authenticated");
+                window.location.href = 'index.html';
+            }
+            else{
+                alert("incorrect username / password")
+            }
+        })
+    </script>
+</body>
+</html>
