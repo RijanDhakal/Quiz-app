@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rijan Dhakal Quiz app</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap');
-    </style>
+    <title>login/signup</title>
+    <link rel="stylesheet" href="login.css">
 </head>
-
 <body>
-    <div class="heading">Welcome to the quiz game developed by - RD</div>
-    <div class="container">
-        <div class="question">Who made this Website ?</div>
-        <div class="options-container">
-            <div class="option one">Rijan Dhakal</div>
-            <div class="option two">Linus Torvals</div>
-            <div class="option three">Elon musk</div>
-            <div class="option four">ans : Chatgpt</div>
+    <div class="conatiner">
+        <div class="box">
+            <div class="heading">Log In</div>
+            <div class="username">
+                <p>Username : </p>
+                <div class="username_input"><input id="halam" type="text"></div>
+            </div>
+            <div class="password">
+                <p>Password :</p>
+                <div class="password-input">
+                    <input id="halam-safe" type="password">
+                </div>
+                <button class="show">Show</button>
+            </div>
+            <button class="enter">Enter</button>
         </div>
-        <button class="next">Next</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        let show = document.body.querySelector(".show")
+        let halam_pass = document.body.querySelector("#halam-safe")
+        show.addEventListener("click" , ()=>{
+            if(halam_pass.type == "password"){
+                halam_pass.type = "text"
+            }
+            else{
+                halam_pass.type = "password"
+            }
+        })
+        document.body.querySelector(".enter").addEventListener("click",()=>{
+            if(
+                document.body.querySelector("#halam-safe").value === "Rd$$deve_1092"
+                &&
+                document.body.querySelector("#halam").value === "Rijan Dhakal"
+            ){
+                alert("authenticated");
+                window.location.href = 'main.html';
+            }
+            else{
+                alert("incorrect username / password")
+            }
+        })
+    </script>
 </body>
-
 </html>
